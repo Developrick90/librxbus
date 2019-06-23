@@ -1,4 +1,4 @@
-package io.left.rightmesh.librxbus;
+package io.marlinski.librxbus;
 
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
@@ -6,15 +6,10 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-import io.reactivex.functions.Predicate;
-
 @Documented
-
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.METHOD})
 public @interface Subscribe {
-
-    Predicate alwaysTrue = (o) -> true;
 
     /**
      * The channels on which the event is subscribed.
